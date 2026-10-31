@@ -1,28 +1,36 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IAHGREE</title>
-<style>
-body {
-  margin: 0;
-  min-height: 100vh;
-  min-height: 100dvh;
-  background: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-img {
-  width: 85%;
-  max-width: 650px;
-  height: auto;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="The simple way for artists, songwriters, producers and collaborators to agree, document and manage music contributions before release.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IAHGREE — No IAHGREE. No Release.">
+  <meta property="og:description" content="The simple way to agree, document and manage music contributions before release.">
+  <meta property="og:url" content="https://iahgree.com/">
+  <meta property="og:image" content="https://iahgree.com/iahgree-logo.png">
+  <title>IAHGREE — No IAHGREE. No Release.</title>
+  <style>
+    :root { color-scheme: light; --purple: #8200d8; --black: #111111; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { background: #fff; color: var(--black); font-family: Arial, Helvetica, sans-serif; }
+    main { min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 48px 22px; }
+    .content { width: min(100%, 980px); text-align: center; }
+    .logo { display: block; width: min(78vw, 660px); max-width: 100%; height: auto; margin: 0 auto 46px; }
+    h1 { margin: 0 auto 25px; color: var(--purple); font-size: clamp(1.45rem, 4.6vw, 3.25rem); line-height: 1.12; font-weight: 900; letter-spacing: -.035em; text-transform: uppercase; }
+    p { margin: 0 auto; max-width: 790px; font-size: clamp(1rem, 2.1vw, 1.4rem); line-height: 1.65; font-weight: 400; }
+    @media (max-width: 600px) { .logo { width: min(85vw, 440px); margin-bottom: 35px; } h1 { margin-bottom: 22px; } p { max-width: 37ch; } }
+  </style>
 </head>
 <body>
-<img src="logo.png" alt="IAHGREE">
+  <main>
+    <div class="content">
+      <img class="logo" src="iahgree-logo.png" alt="IAHGREE" width="660" height="260">
+      <h1>No IAHGREE. No Release.</h1>
+      <p>The simple way for artists, songwriters, producers and collaborators to agree, document and manage music contributions before release.</p>
+    </div>
+  </main>
 </body>
 </html>

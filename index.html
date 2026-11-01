@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="The simple way for artists, songwriters, producers and collaborators to agree, document and manage music contributions before release.">
+  <meta name="description" content="IAHGREE helps music creators agree on splits, sign agreements and document contributions before release. Join the beta waitlist.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="IAHGREE — No IAHGREE. No Release.">
-  <meta property="og:description" content="The simple way to agree, document and manage music contributions before release.">
+  <meta property="og:description" content="Every song starts with an agreement. Join the IAHGREE beta waitlist.">
   <meta property="og:url" content="https://iahgree.com/">
   <meta property="og:image" content="https://iahgree.com/iahgree-logo.png">
   <title>IAHGREE — No IAHGREE. No Release.</title>
@@ -18,10 +18,26 @@
     body { background: #fff; color: var(--black); font-family: Arial, Helvetica, sans-serif; }
     main { min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 48px 22px; }
     .content { width: min(100%, 980px); text-align: center; }
-    .logo { display: block; width: min(78vw, 660px); max-width: 100%; height: auto; margin: 0 auto 46px; }
-    h1 { margin: 0 auto 25px; color: var(--purple); font-size: clamp(1.45rem, 4.6vw, 3.25rem); line-height: 1.12; font-weight: 900; letter-spacing: -.035em; text-transform: uppercase; }
-    p { margin: 0 auto; max-width: 790px; font-size: clamp(1rem, 2.1vw, 1.4rem); line-height: 1.65; font-weight: 400; }
-    @media (max-width: 600px) { .logo { width: min(85vw, 440px); margin-bottom: 35px; } h1 { margin-bottom: 22px; } p { max-width: 37ch; } }
+    .logo { display: block; width: min(78vw, 660px); max-width: 100%; height: auto; margin: 0 auto 34px; }
+    h1 { margin: 0 auto 18px; color: var(--purple); font-size: clamp(1.45rem, 4.6vw, 3.25rem); line-height: 1.12; font-weight: 900; letter-spacing: -.035em; text-transform: uppercase; }
+    .intro { margin: 0 auto; max-width: 730px; font-size: clamp(1rem, 2.1vw, 1.3rem); line-height: 1.55; }
+    .beta { margin: 36px auto 0; max-width: 480px; }
+    h2 { margin: 0 0 10px; font-size: clamp(1.4rem, 3vw, 2rem); letter-spacing: -.025em; }
+    .beta > p { margin: 0 auto 22px; font-size: 1rem; line-height: 1.5; }
+    button { font: inherit; cursor: pointer; }
+    .primary { background: var(--purple); color: #fff; border: 2px solid var(--purple); border-radius: 8px; padding: 14px 24px; font-weight: 700; font-size: 1rem; }
+    .primary:hover { background: #6500a9; border-color: #6500a9; }
+    .primary:focus-visible, input:focus-visible, select:focus-visible, .secondary:focus-visible { outline: 3px solid #b575e9; outline-offset: 3px; }
+    .signup { text-align: left; margin: 22px auto 0; padding: 22px; border: 1px solid #e7e0eb; border-radius: 12px; }
+    .signup[hidden] { display: none; }
+    label.field { display: block; font-size: .92rem; font-weight: 700; margin-bottom: 15px; }
+    input:not([type="checkbox"]), select { display: block; width: 100%; margin-top: 7px; padding: 12px; font: inherit; border: 1px solid #aaa; border-radius: 6px; background: #fff; color: var(--black); }
+    .consent { display: flex; align-items: flex-start; gap: 10px; font-size: .87rem; line-height: 1.4; margin: 4px 0 20px; }
+    .consent input { margin-top: 3px; accent-color: var(--purple); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .secondary { background: transparent; border: 0; padding: 12px; color: #555; }
+    .note { font-size: .78rem; color: #666; line-height: 1.45; margin: 12px 0 0; }
+    @media (max-width: 600px) { main { padding: 35px 20px; } .logo { width: min(85vw, 440px); margin-bottom: 30px; } h1 { margin-bottom: 18px; } .intro { max-width: 38ch; } .beta { margin-top: 30px; } }
   </style>
 </head>
 <body>
@@ -29,8 +45,56 @@
     <div class="content">
       <img class="logo" src="iahgree-logo.png" alt="IAHGREE" width="660" height="260">
       <h1>No IAHGREE. No Release.</h1>
-      <p>The simple way for artists, songwriters, producers and collaborators to agree, document and manage music contributions before release.</p>
+      <p class="intro">Every song starts with an agreement. IAHGREE makes it simple for music creators to agree on splits, sign agreements and document their contributions — all in one place.</p>
+      <section class="beta" aria-labelledby="beta-title">
+        <h2 id="beta-title">Be First to IAHGREE.</h2>
+        <p>Join our beta waitlist for a chance at early access and help shape the platform.</p>
+        <button class="primary" type="button" id="open-form" aria-expanded="false" aria-controls="signup">Join the Beta Waitlist</button>
+        <form class="signup" id="signup" action="https://formspree.io/f/maeepzbk" method="POST" hidden>
+          <input type="hidden" name="_subject" value="New IAHGREE Beta Waitlist Signup">
+          <label class="field" for="name">Full name
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required>
+          </label>
+          <label class="field" for="email">Email address
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          </label>
+          <label class="field" for="role">Your role
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select your role</option>
+              <option>Artist</option>
+              <option>Songwriter</option>
+              <option>Producer</option>
+              <option>Manager</option>
+              <option>Label</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="consent"><input type="checkbox" name="beta_contact_consent" value="yes" required> <span>I agree to be contacted by IAHGREE about beta testing and related updates.</span></label>
+          <div class="actions">
+            <button class="primary" type="submit">Join the Waitlist</button>
+            <button class="secondary" type="button" id="close-form">Cancel</button>
+          </div>
+          <p class="note">Submitting this form registers your interest; beta access is not guaranteed.</p>
+        </form>
+      </section>
     </div>
   </main>
+  <script>
+    const openButton = document.getElementById('open-form');
+    const closeButton = document.getElementById('close-form');
+    const signup = document.getElementById('signup');
+    openButton.addEventListener('click', () => {
+      signup.hidden = false;
+      openButton.hidden = true;
+      openButton.setAttribute('aria-expanded', 'true');
+      document.getElementById('name').focus();
+    });
+    closeButton.addEventListener('click', () => {
+      signup.hidden = true;
+      openButton.hidden = false;
+      openButton.setAttribute('aria-expanded', 'false');
+      openButton.focus();
+    });
+  </script>
 </body>
 </html>
